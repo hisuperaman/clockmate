@@ -1,5 +1,4 @@
 import { View, TouchableOpacity, StatusBar, StyleSheet } from "react-native";
-import { router } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Button, IconButton, Text } from "@/components";
 import { useClock } from "@/hooks";
@@ -8,9 +7,17 @@ import { Player } from "@/definitions";
 import { formatTime, formatTimeControl } from "@/utils/time";
 import { COLORS } from "@/constants/colors";
 import { RADII, SIZES, SPACING } from "@/constants/theme";
-import { Clock3, Pause, Play, RotateCcw } from "lucide-react-native";
+// Per-icon imports: the package root pulls every lucide icon into the bundle.
+import Clock3 from "lucide-react-native/icons/clock-3";
+import Pause from "lucide-react-native/icons/pause";
+import Play from "lucide-react-native/icons/play";
+import RotateCcw from "lucide-react-native/icons/rotate-ccw";
 
-export default function ClockScreen() {
+interface ClockScreenProps {
+	onOpenSetup: () => void;
+}
+
+export function ClockScreen({ onOpenSetup }: ClockScreenProps) {
 	const {
 		times,
 		activePlayer,
@@ -127,7 +134,7 @@ export default function ClockScreen() {
 							icon={Clock3}
 							label={formatTimeControl(initialTime, increment)}
 							accessibilityLabel="Change time control"
-							onPress={() => router.push("/setup")}
+							onPress={onOpenSetup}
 						/>
 					)}
 				</View>

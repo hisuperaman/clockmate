@@ -6,7 +6,6 @@ import {
 	KeyboardAvoidingView,
 	Platform,
 } from "react-native";
-import { router } from "expo-router";
 import { useState } from "react";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Button, Chip, IconButton, NumberField, Text, TimeControlButton } from "@/components";
@@ -16,7 +15,7 @@ import { useClock } from "@/hooks";
 import { CATEGORIES } from "@/constants/categories";
 import { COLORS } from "@/constants/colors";
 import { SIZES, SPACING } from "@/constants/theme";
-import { X } from "lucide-react-native";
+import X from "lucide-react-native/icons/x";
 
 const TIME_CONTROLS: TimeControl[] = [
 	// Bullet
@@ -40,7 +39,11 @@ const TIME_CONTROLS: TimeControl[] = [
 	{ label: "90+30", category: Categories.CLASSICAL, seconds: 5400, increment: 30 },
 ];
 
-export default function SetupScreen() {
+interface SetupScreenProps {
+	onClose: () => void;
+}
+
+export function SetupScreen({ onClose }: SetupScreenProps) {
 	const insets = useSafeAreaInsets();
 	const { initialTime, increment: ctxIncrement, setTimeControl } = useClock();
 
@@ -96,7 +99,7 @@ export default function SetupScreen() {
 	function handleConfirm() {
 		if (selectedSeconds > 0) {
 			setTimeControl(selectedSeconds, selectedIncrement);
-			router.back();
+			onClose();
 		}
 	}
 
@@ -140,7 +143,7 @@ export default function SetupScreen() {
 					<IconButton
 						icon={X}
 						accessibilityLabel="Close"
-						onPress={() => router.back()}
+						onPress={onClose}
 					/>
 					<Text variant="title">Time Control</Text>
 					<View style={styles.headerSpacer} />

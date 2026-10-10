@@ -1,5 +1,5 @@
 import { StyleProp, StyleSheet, TouchableOpacity, ViewStyle } from "react-native";
-import { LucideIcon } from "lucide-react-native";
+import type { LucideIcon } from "lucide-react-native";
 import { COLORS } from "@/constants/colors";
 import { RADII, SIZES, SPACING } from "@/constants/theme";
 

@@ -1,10 +1,8 @@
 import { TextStyle } from "react-native";
 
 export const FONTS = {
-	regular: "poppins",
 	medium: "poppins-medium",
 	semibold: "poppins-semibold",
-	bold: "poppins-bold",
 } as const;
 
 export const TYPOGRAPHY = {
