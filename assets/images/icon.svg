@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <rect width="1024" height="1024" fill="#000"/>
+  <g transform="translate(512 512) scale(1) translate(-512 -523)">
+  <!-- plungers: left raised, right pressed -->
+  <rect x="327" y="350" width="50" height="90" rx="10" fill="#fff"/>
+  <rect x="287" y="322" width="130" height="40" rx="20" fill="#fff"/>
+  <rect x="647" y="396" width="50" height="40" rx="10" fill="#fff"/>
+  <rect x="607" y="380" width="130" height="40" rx="20" fill="#fff"/>
+  <!-- body -->
+  <rect x="192" y="428" width="640" height="296" rx="64" fill="#fff"/>
+  
+    <circle cx="352" cy="576" r="112" fill="#000"/>
+    <circle cx="352" cy="490" r="9" fill="#fff"/>
+    <circle cx="438" cy="576" r="7" fill="#fff" opacity=".55"/>
+    <circle cx="266" cy="576" r="7" fill="#fff" opacity=".55"/>
+    <circle cx="352" cy="662" r="7" fill="#fff" opacity=".55"/>
+    <line x1="352" y1="576" x2="305.71929210256917" y2="520.8448000954336" stroke="#fff" stroke-width="16" stroke-linecap="round"/>
+    <circle cx="352" cy="576" r="16" fill="#fff"/>
+  
+    <circle cx="672" cy="576" r="112" fill="#000"/>
+    <circle cx="672" cy="490" r="9" fill="#fff"/>
+    <circle cx="758" cy="576" r="7" fill="#fff" opacity=".55"/>
+    <circle cx="586" cy="576" r="7" fill="#fff" opacity=".55"/>
+    <circle cx="672" cy="662" r="7" fill="#fff" opacity=".55"/>
+    <line x1="672" y1="576" x2="734.3538290724796" y2="540" stroke="#fff" stroke-width="16" stroke-linecap="round"/>
+    <circle cx="672" cy="576" r="16" fill="#fff"/></g></svg>
